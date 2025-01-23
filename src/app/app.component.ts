@@ -8,5 +8,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'First-app';
+  title = 'First Project';
+  name = "Vishal"
+  date = new Date()
 }
