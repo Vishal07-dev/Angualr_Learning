@@ -14,11 +14,11 @@ export class AppComponent {
   title = 'First Angular Project';
   todoValue: string = '';
   list: Todo[] = [];
-  
+
 
   ngOnInit() {
     this.list = [];
-    this.changetitle()
+    // this.changetitle()
   }
 
   changetitle()
