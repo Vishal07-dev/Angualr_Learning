@@ -1,3 +1,28 @@
 <div>
-  <h1>vishal</h1>
+<div class="bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-[#1d4ed8] via-[#1e40af] to-[#111827] w-full flex flex-col justify-center items-center min-h-screen border border-red-800">
+  <div class="bg-gradient-to-b from-[#06b6d4] via-[#2563eb] to-[#6366f1] flex flex-col rounded-lg  h-fit w-[30%]">
+    <div>
+      <h1 class=" text-center p-5 text-teal-100 font-bold text-4xl">{{ title }}</h1>
+    </div>
+    <div class="flex justify-center items-center gap-10 p-5">
+      <input
+      type="text"
+      [(ngModel)]="todoValue"
+      placeholder="Add a new task"
+      class="border   p-3 rounded-lg w-[50%]"
+      (keyup.enter)="addItem()"
+    />
+    <button class="rounded-lg p-3 w-[20%] bg-green-950 text-white" (click)="addItem()">Add</button>
+    </div>
+    <ul class="p-5 w-full">
+      <li class="flex gap-10 p-3 " *ngFor="let item of list">
+        <input class=" rounded-lg  p-3 w-[80%] bg-cyan-900 text-white" type="text" value= "{{ item.value }}" readonly >
+       
+        <button  class="rounded-2xl w-[20%] bg-red-900 text-white" (click)="deleteItem(item.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
+  <!-- <button (click)="changetitle()">change title</button> -->
+</div>
 </div>
