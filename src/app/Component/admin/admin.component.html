@@ -1,0 +1,42 @@
+<div class="w-full h-screen gap-10 text-white bg-black flex flex-col justify-center items-center">
+    <div class="text-white">
+        <h1 class="text-2xl">This is ngif Example</h1>
+            <h1 *ngIf="isDivVisible">This is div box</h1>
+            <button (click)="onshow()">{{togglebtn}}</button>
+            <br>
+
+            <h1 *ngIf="box1==box2" class="font-bold">This is show when both inputs are same</h1>
+        <div class="text-black">
+            <input [(ngModel)]="box1"
+             type="text" name="" id=""> <br> <br>
+            <input [(ngModel)]="box2"
+             type="text" name="" id="">
+            </div>
+    </div>
+
+    <div>
+        <h1 class="text-2xl">This is for loop example</h1>
+    </div>
+    <div>
+        <table>
+            <tr *ngFor="let elem of namearray ">
+                <td >
+                    {{elem}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="text-black">
+        <select>
+            <option *ngFor="let name of namearray">{{name}}</option>
+        </select>
+    </div>
+
+    <div>
+        <div *ngFor="let element of tableobj">
+            <span>{{element.name}} - {{element.age}} - {{element.city}}</span>
+        </div>
+    </div>
+
+</div>
+

@@ -2,13 +2,15 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // For ngModel
 import { CommonModule } from '@angular/common'; // For *ngFor and other common directives
 import { Todo } from './Todo';
+import { UserComponent } from "./Component/user/user.component";
+import { AdminComponent } from "./Component/admin/admin.component";
+// import { AdminComponent } from "./Component/admin/admin.component";
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [FormsModule, CommonModule], // Import both FormsModule and CommonModule
+  imports: [FormsModule, CommonModule, AdminComponent], // Import both FormsModule and CommonModule
 })
 export class AppComponent {
   title = 'First Angular Project';
